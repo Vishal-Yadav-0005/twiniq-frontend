@@ -554,13 +554,10 @@
     width: 90%;
   }
 
-  .dashboard {
-    flex-direction: column;
-  }
-
   .sidebar {
-    width: 100%;
-  }
+  width: 180px;
+  flex-shrink: 0;
+}
 
   .kpi-container {
     grid-template-columns: 1fr;
