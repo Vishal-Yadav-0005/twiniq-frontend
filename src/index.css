@@ -1,3 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap');
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #151c27;
+  background: #f9f9ff;
+
+  --primary: #004ac6;
+  --primary-container: #2563eb;
+  --secondary: #712ae2;
+
+  --page-bg: #f9f9ff;
+  --surface: #ffffff;
+  --surface-low: #f0f3ff;
+  --surface-container: #e7eefe;
+
+  --text-primary: #151c27;
+  --text-secondary: #434655;
+
+  --border: #c3c6d7;
+  --border-light: #e2e8f8;
+
+  --sidebar-width: 280px;
+  --radius-card: 14px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +51,43 @@ html,
 body,
 #root {
   min-height: 100%;
+  width: 100%;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f8fafc;
-  color: #111827;
+  font-family: 'Inter', sans-serif;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+label {
+  font-family: 'Geist', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary-container);
+  outline-offset: 2px;
+}
+
+img,
+svg {
+  max-width: 100%;
 }

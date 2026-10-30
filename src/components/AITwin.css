@@ -1,0 +1,819 @@
+
+/* =========================================
+   AI TWIN PAGE
+========================================= */
+
+.aitwin-page {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+  overflow-y: auto;
+  background: #f8faff;
+}
+
+.aitwin-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Breadcrumb */
+
+.aitwin-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 24px;
+  color: #737686;
+  font-size: 12px;
+}
+
+.aitwin-breadcrumb .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.aitwin-breadcrumb strong {
+  color: #2563eb;
+}
+
+/* =========================================
+   AI TWIN PROFILE
+========================================= */
+
+.aitwin-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f8;
+  border-radius: 12px;
+}
+
+.aitwin-avatar {
+  position: relative;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  color: #ffffff;
+  background: #2563eb;
+  border-radius: 12px;
+}
+
+.aitwin-avatar .material-symbols-outlined {
+  font-size: 34px;
+}
+
+.aitwin-avatar i {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 13px;
+  height: 13px;
+  background: #22c55e;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.aitwin-profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.aitwin-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.aitwin-title-row h1 {
+  color: #151c27;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.aitwin-live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.aitwin-live-status i {
+  width: 6px;
+  height: 6px;
+  background: #16a34a;
+  border-radius: 50%;
+}
+
+.aitwin-profile-info > p {
+  margin-top: 5px;
+  color: #737686;
+  font-size: 13px;
+}
+
+.aitwin-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+  color: #737686;
+  font-size: 11px;
+}
+
+.aitwin-profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Buttons */
+
+.aitwin-profile-actions button,
+.aitwin-primary-btn,
+.aitwin-outline-btn {
+  min-height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.aitwin-primary-btn {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.aitwin-primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.aitwin-outline-btn {
+  color: #151c27;
+  background: #ffffff;
+  border: 1px solid #c3c6d7;
+}
+
+.aitwin-outline-btn:hover {
+  background: #f0f3ff;
+}
+
+.aitwin-primary-btn .material-symbols-outlined,
+.aitwin-outline-btn .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* =========================================
+   TABS
+========================================= */
+
+.aitwin-tabs {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+  overflow-x: auto;
+  border-bottom: 1px solid #c3c6d7;
+  scrollbar-width: thin;
+}
+
+.aitwin-tabs button {
+  flex-shrink: 0;
+  padding: 12px 3px;
+  color: #737686;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.aitwin-tabs button.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  font-weight: 600;
+}
+
+/* =========================================
+   OVERVIEW METRICS
+========================================= */
+
+.aitwin-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.aitwin-metrics article {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 19px;
+  background: #ffffff;
+  border: 1px solid #e2e8f8;
+  border-radius: 10px;
+}
+
+.aitwin-metrics article span {
+  color: #737686;
+  font-size: 12px;
+}
+
+.aitwin-metrics article strong {
+  color: #151c27;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.aitwin-metrics article small {
+  color: #16803d;
+  font-size: 10px;
+}
+
+/* =========================================
+   PANELS AND CONTENT GRID
+========================================= */
+
+.aitwin-content-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.aitwin-panel {
+  min-width: 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f8;
+  border-radius: 10px;
+}
+
+.aitwin-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.aitwin-panel-heading h2,
+.aitwin-tab-panel > h2 {
+  color: #151c27;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.aitwin-panel-heading p {
+  margin-top: 5px;
+  color: #737686;
+  font-size: 11px;
+}
+
+.aitwin-panel-heading > .material-symbols-outlined {
+  color: #737686;
+}
+
+/* =========================================
+   INFERENCE ACTIVITY
+========================================= */
+
+.aitwin-activity {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e7eefe;
+}
+
+.aitwin-activity:last-child {
+  border-bottom: 0;
+}
+
+.aitwin-activity-icon,
+.aitwin-run-icon,
+.aitwin-detail-icon,
+.aitwin-version-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #2563eb;
+  background: #eff4ff;
+  border-radius: 9px;
+}
+
+.aitwin-activity-icon .material-symbols-outlined,
+.aitwin-run-icon .material-symbols-outlined,
+.aitwin-detail-icon .material-symbols-outlined,
+.aitwin-version-icon .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.aitwin-activity-info {
+  min-width: 0;
+}
+
+.aitwin-activity-info strong {
+  color: #151c27;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.aitwin-activity-info p {
+  margin-top: 4px;
+  color: #737686;
+  font-size: 11px;
+}
+
+.aitwin-activity-info small {
+  display: block;
+  margin-top: 6px;
+  color: #8b90a0;
+  font-size: 10px;
+}
+
+/* =========================================
+   TWIN CAPABILITIES
+========================================= */
+
+.aitwin-capability {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e7eefe;
+}
+
+.aitwin-capability > .material-symbols-outlined {
+  color: #2563eb;
+  font-size: 21px;
+}
+
+.aitwin-capability div {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aitwin-capability strong {
+  color: #151c27;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.aitwin-capability small {
+  color: #16803d;
+  font-size: 10px;
+}
+
+.aitwin-capability > i {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.aitwin-manage-btn {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 13px;
+  color: #2563eb;
+  background: #eff4ff;
+  border: 0;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.aitwin-manage-btn:hover {
+  background: #e2ebff;
+}
+
+/* =========================================
+   RECENT TRAINING RUNS
+========================================= */
+
+.aitwin-runs-panel {
+  margin-top: 20px;
+}
+
+.aitwin-text-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 10px;
+  color: #2563eb;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.aitwin-training-row {
+  min-height: 65px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e7eefe;
+}
+
+.aitwin-training-row:last-child {
+  border-bottom: 0;
+}
+
+.aitwin-run-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aitwin-run-info strong {
+  color: #151c27;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.aitwin-run-info small {
+  color: #737686;
+  font-size: 10px;
+}
+
+.aitwin-training-complete,
+.aitwin-archived,
+.aitwin-connected {
+  flex-shrink: 0;
+  padding: 5px 9px;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.aitwin-archived {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+/* =========================================
+   TAB PANELS
+========================================= */
+
+.aitwin-tab-panel {
+  margin-top: 22px;
+}
+
+.aitwin-count {
+  padding: 6px 10px;
+  color: #475569;
+  background: #f1f5f9;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================
+   CAPABILITIES TAB
+========================================= */
+
+.aitwin-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.aitwin-detail-card {
+  min-width: 0;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f8;
+  border-radius: 9px;
+}
+
+.aitwin-detail-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+}
+
+.aitwin-detail-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.aitwin-detail-title h3 {
+  color: #151c27;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.aitwin-detail-card > p {
+  margin-top: 10px;
+  color: #737686;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   KNOWLEDGE SOURCES TAB
+========================================= */
+
+.aitwin-source-row,
+.aitwin-version-row {
+  min-height: 69px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e7eefe;
+}
+
+.aitwin-source-row:last-child,
+.aitwin-version-row:last-child {
+  border-bottom: 0;
+}
+
+.aitwin-source-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aitwin-source-info strong {
+  color: #151c27;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.aitwin-source-info small {
+  color: #737686;
+  font-size: 11px;
+}
+
+/* =========================================
+   MEMORY TAB
+========================================= */
+
+.aitwin-memory-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.aitwin-memory-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 16px;
+  background: #f8faff;
+  border: 1px solid #e2e8f8;
+  border-radius: 9px;
+}
+
+.aitwin-memory-summary span {
+  color: #737686;
+  font-size: 11px;
+}
+
+.aitwin-memory-summary strong {
+  color: #151c27;
+  font-size: 22px;
+}
+
+.aitwin-memory-importance {
+  padding: 5px 9px;
+  color: #8a5a12;
+  background: #fef3c7;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.aitwin-confidence {
+  min-width: 42px;
+  color: #16803d;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =========================================
+   VERSIONS TAB
+========================================= */
+
+.aitwin-version-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.aitwin-version-row .aitwin-source-info {
+  flex: 1;
+}
+
+.aitwin-version-row .aitwin-archived {
+  white-space: nowrap;
+}
+
+/* =========================================
+   LOGS TAB
+========================================= */
+
+.aitwin-log-header,
+.aitwin-log-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px 100px;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 8px;
+  border-bottom: 1px solid #e7eefe;
+}
+
+.aitwin-log-header {
+  color: #737686;
+  border-bottom-color: #c3c6d7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.aitwin-log-row {
+  min-height: 70px;
+}
+
+.aitwin-log-row > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aitwin-log-row strong {
+  color: #151c27;
+  font-size: 12px;
+}
+
+.aitwin-log-row small {
+  color: #737686;
+  font-size: 10px;
+}
+
+.aitwin-log-row > span:nth-child(2) {
+  color: #737686;
+  font-size: 11px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .aitwin-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aitwin-profile {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .aitwin-profile-actions {
+    width: 100%;
+    padding-left: 84px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .aitwin-page {
+    padding: 20px 15px;
+  }
+
+  .aitwin-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aitwin-profile {
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .aitwin-profile-actions {
+    padding-left: 0;
+  }
+
+  .aitwin-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aitwin-memory-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .aitwin-log-header,
+  .aitwin-log-row {
+    grid-template-columns: minmax(0, 1fr) 85px;
+    gap: 8px;
+  }
+
+  .aitwin-log-header span:last-child,
+  .aitwin-log-row > span:last-child {
+    display: none;
+  }
+
+  .aitwin-log-row > span:nth-child(2) {
+    text-align: right;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .aitwin-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .aitwin-metrics article {
+    min-height: 115px;
+    padding: 13px;
+  }
+
+  .aitwin-metrics article strong {
+    font-size: 21px;
+  }
+
+  .aitwin-profile-actions button {
+    flex: 1;
+  }
+
+  .aitwin-title-row h1 {
+    font-size: 23px;
+  }
+
+  .aitwin-panel {
+    padding: 15px;
+  }
+
+  .aitwin-tabs {
+    gap: 18px;
+  }
+
+  .aitwin-training-row {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .aitwin-training-row > span {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .aitwin-source-row,
+  .aitwin-version-row {
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .aitwin-confidence {
+    margin-left: auto;
+  }
+}

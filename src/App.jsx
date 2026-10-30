@@ -1,7 +1,15 @@
+
 import { useState } from "react";
 import Dashboard from "./components/Dashboard";
 import AITwin from "./components/AITwin";
 import Layout from "./components/Layout";
+import Auth from "./components/Auth";
+import Knowledge from "./components/Knowledge";
+import Memory from "./components/Memory";
+import Agents from "./components/Agents";
+import Automations from "./components/Automations";
+import Analytics from "./components/Analytics";
+import Settings from "./components/Settings";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -17,119 +25,37 @@ function App() {
 
   if (isLoggedIn) {
     return (
-     <Layout page={page} setPage={setPage}>
-
+      <Layout page={page} setPage={setPage}>
         {page === "dashboard" && <Dashboard />}
 
-       {page === "ai-twin" && <AITwin setPage={setPage} />}
+        {page === "ai-twin" && <AITwin setPage={setPage} />}
 
-        {page === "knowledge" && (
-  <main className="main-content">
+        {page === "knowledge" && <Knowledge />}
 
-    <h1>Knowledge</h1>
+        {page === "memory" && <Memory />}
 
-    <p>Manage your organization's knowledge.</p>
+        {page === "agents" && <Agents />}
 
-    <div className="knowledge-card">
+        {page === "automations" && <Automations />}
 
-      <h2>Knowledge Base</h2>
+        {page === "analytics" && <Analytics />}
 
-      <p>Company Documents</p>
-      <p>Business Information</p>
-      <p>Processes & Workflows</p>
-      <p>Customer Information</p>
-
-      <button>Add Knowledge</button>
-
-    </div>
-
-  </main>
-)}
-
-       {page === "memory" && (
-  <main className="main-content">
-
-    <h1>Memory</h1>
-
-    <p>Manage your AI Twin memory.</p>
-
-    <div className="memory-card">
-
-      <h2>Recent Memory</h2>
-
-      <p>Customer preferences updated</p>
-      <p>New business process learned</p>
-      <p>Recent conversation stored</p>
-      <p>Organization knowledge updated</p>
-
-      <button>Clear Memory</button>
-
-    </div>
-
-  </main>
-)}
+        {page === "settings" && <Settings />}
 
       </Layout>
     );
   }
 
   return (
-    <div className="login-page">
-      <div className="login-box">
-
-        <div className="logo">T</div>
-
-        <h1>
-          {isSignup ? "Create Account" : "TwinIQ"}
-        </h1>
-
-        <h2>
-          {isSignup ? "Create Your Account" : "Welcome Back"}
-        </h2>
-
-        <p>
-          {isSignup
-            ? "Create your account to get started"
-            : "Sign in to your account"}
-        </p>
-
-        {isSignup && (
-          <input
-            type="text"
-            placeholder="Full Name"
-          />
-        )}
-
-        <input
-          type="email"
-          placeholder="Enter Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <input
-          type="password"
-          placeholder="Enter Your Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button onClick={handleLogin}>
-          {isSignup ? "Sign Up" : "Login"}
-        </button>
-
-        <p>
-          {isSignup
-            ? "Already have an account?"
-            : "Don't have an account?"}{" "}
-
-          <button onClick={() => setIsSignup(!isSignup)}>
-            {isSignup ? "Login" : "Sign Up"}
-          </button>
-        </p>
-
-      </div>
-    </div>
+    <Auth
+      email={email}
+      setEmail={setEmail}
+      password={password}
+      setPassword={setPassword}
+      isSignup={isSignup}
+      setIsSignup={setIsSignup}
+      handleLogin={handleLogin}
+    />
   );
 }
 
