@@ -3030,6 +3030,44 @@
     gap: 6px;
   }
 }
+/* Analytics Smooth Hover Effects */
+
+.analytics-stat-card,
+.analytics-panel,
+.analytics-performance-panel,
+.analytics-metrics-panel,
+.analytics-savings-panel,
+.analytics-metric-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.analytics-stat-card:hover,
+.analytics-panel:hover,
+.analytics-performance-panel:hover,
+.analytics-metrics-panel:hover,
+.analytics-savings-panel:hover {
+  transform: translateY(-3px);
+  border-color: #c7d7ff;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.07);
+}
+
+.analytics-metric-item:hover {
+  transform: translateY(-2px);
+  background: var(--surface);
+}
+
+.analytics-bar-track {
+  transition: background 0.25s ease;
+}
+
+.analytics-bar {
+  transition: height 0.4s ease, filter 0.25s ease;
+}
+
+.analytics-bar-group:hover .analytics-bar {
+  filter: brightness(1.12);
+}
 /* =========================
    SETTINGS PAGE
 ========================= */

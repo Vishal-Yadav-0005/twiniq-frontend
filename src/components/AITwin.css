@@ -817,3 +817,54 @@
     margin-left: auto;
   }
 }
+
+/* AI Twin Smooth Hover Effects */
+
+.aitwin-profile,
+.aitwin-metrics article,
+.aitwin-panel,
+.aitwin-detail-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.aitwin-profile:hover,
+.aitwin-metrics article:hover,
+.aitwin-panel:hover,
+.aitwin-detail-card:hover {
+  transform: translateY(-3px);
+  border-color: #c7d7ff;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.07);
+}
+
+.aitwin-activity,
+.aitwin-capability,
+.aitwin-training-row,
+.aitwin-source-row,
+.aitwin-version-row {
+  transition: background 0.2s ease, padding 0.2s ease;
+}
+
+.aitwin-activity:hover,
+.aitwin-capability:hover,
+.aitwin-training-row:hover,
+.aitwin-source-row:hover,
+.aitwin-version-row:hover {
+  background: #f8faff;
+}
+
+.aitwin-manage-btn,
+.aitwin-text-btn,
+.aitwin-profile-actions button,
+.aitwin-tabs button {
+  transition: all 0.25s ease;
+}
+
+.aitwin-manage-btn:hover,
+.aitwin-text-btn:hover {
+  transform: translateX(3px);
+}
+
+.aitwin-tabs button:hover {
+  color: #2563eb;
+}

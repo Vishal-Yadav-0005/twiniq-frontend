@@ -502,3 +502,46 @@
     font-size: 16px;
   }
 }
+
+/* Knowledge Smooth Hover Effects */
+
+.knowledge-stat-card,
+.knowledge-source-card,
+.knowledge-add-source,
+.knowledge-documents {
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.knowledge-stat-card:hover,
+.knowledge-source-card:hover,
+.knowledge-add-source:hover,
+.knowledge-documents:hover {
+  transform: translateY(-3px);
+  border-color: #a8c5ff;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.07);
+}
+
+.knowledge-heading-actions button,
+.knowledge-row-action,
+.knowledge-table-footer button,
+.knowledge-source-config {
+  transition: all 0.25s ease;
+}
+
+.knowledge-heading-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.knowledge-row-action:hover,
+.knowledge-table-footer button:hover {
+  transform: scale(1.08);
+}
+
+.knowledge-progress span {
+  transition: width 0.5s ease;
+}
+
+.knowledge-table tbody tr {
+  transition: background 0.2s ease;
+}
